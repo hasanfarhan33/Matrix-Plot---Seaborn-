@@ -16,8 +16,9 @@ tc = tips.corr()
 # sns.heatmap(tc, annot=True, cmap='coolwarm')
 
 fc = flights.pivot_table(index='month', columns='year', values='passengers')
-sns.heatmap(fc)
+# sns.heatmap(fc)
 
-
+# CLUSTER MAP
+sns.clustermap(fc, cmap='coolwarm', standard_scale=1)
 
 plt.show()
